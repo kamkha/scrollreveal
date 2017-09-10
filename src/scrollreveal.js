@@ -131,6 +131,8 @@
    * @return {boolean}
    */
   ScrollReveal.prototype.isSupported = function() {
+    if (typeof document === "undefined") return false;
+
     var style = document.documentElement.style;
     return (
       ("WebkitTransition" in style && "WebkitTransform" in style) ||
