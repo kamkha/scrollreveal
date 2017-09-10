@@ -4,6 +4,7 @@
   "description": "Easy scroll animations for web and mobile browsers.",
   "homepage": "https://scrollrevealjs.org",
   "main": "dist/scrollreveal.js",
+  "files": ["dist"],
   "author": "Julian Lloyd",
   "license": "MIT",
   "repository": {
