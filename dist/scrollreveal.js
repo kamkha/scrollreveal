@@ -93,7 +93,7 @@
     // `<html>` is the default reveal container. You can pass either:
     // DOM Node, e.g. document.querySelector('.fooContainer')
     // Selector, e.g. '.fooContainer'
-    container: window.document.documentElement,
+    container: typeof "window" !== "undefined" ? window.document.documentElement : undefined,
 
     // true/false to control reveal animations on mobile.
     mobile: true,
@@ -149,6 +149,8 @@
    * @return {Object} The current ScrollReveal instance.
    */
   ScrollReveal.prototype.reveal = function (target, config, interval, sync) {
+    if (typeof "window" === "undefined") return;
+
     var container
     var elements
     var elem
